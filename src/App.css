@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -32,7 +38,67 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+img,
+video {
+  max-width: 100%;
+  height: 14rem;
+}
+
+.px-6 {
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h1 h3 {
+    text-align: center;
+  }
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.8em;
+  font-size: 1rem;
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.newsCards{
+  position: relative;
+}
+.rounded {
+  border-radius: 1.25rem !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .brandIcon {
+    display: none;
+  }
+  .login-removed{
+    display: none !important;
+  }
+}
+@media screen and (min-width: 860px) {
+  .brandIcon-2 {
+    display: none;
+  }
+}
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.25)!important;
 }
