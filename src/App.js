@@ -65,7 +65,7 @@ function App() {
   }
   const [progress, setProgress] = useState(0)
   const apiKeys = process.env.REACT_APP_NEWS_API_KEY;
-  // console.log(apiKeys)
+  console.log(apiKeys)
   // const apiKeys = '6eea252d71e14e1492695a0507c30471'
   
   return (
