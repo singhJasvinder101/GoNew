@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Newsitem from './Newsitem'
 import Spinner from './Spinners'
+import { Link } from 'react-router-dom'
 
 
 export default function News(props) {
@@ -33,8 +34,9 @@ export default function News(props) {
                 props.setProgress(100)
             } catch (e) { console.log(e.message) }
         }
-        fetchData()
-    }, [page]);
+        fetchData() 
+        // eslint-disable-next-line
+    }, [page]);   
 
 
     const handlePreviousClick = async () => {
@@ -61,9 +63,9 @@ export default function News(props) {
         for (let i = 1; i <= totalPages; i++) {
             pageNumbers.push(
                 <li key={i} className={`page-item ${page === i ? 'active' : ''}`}>
-                    <a onClick={() => setPage(i)} style={{ cursor: 'pointer' }} className="page-link">
+                    <Link onClick={() => setPage(i)} style={{ cursor: 'pointer' }} className="page-link">
                         {i}
-                    </a>
+                    </Link>
                 </li>
             );
         }

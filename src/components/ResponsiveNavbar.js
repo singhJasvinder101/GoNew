@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -8,21 +7,16 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
 import { BsMoonStarsFill } from 'react-icons/bs';
 import { LuSunMoon } from 'react-icons/lu';
 import { SiApplenews } from 'react-icons/si';
 import { BiLogIn } from 'react-icons/bi';
-import { Alert } from '@mui/material';
 
 import { Link } from 'react-router-dom';
 import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 // const pages = ['Business', 'Technology', 'Entertainment', 'health', 'sports'];
 const pages = [
@@ -33,28 +27,17 @@ const pages = [
   { name: 'Health', link: '/health' },
   { name: 'Sports', link: '/sports' }
 ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
 
 function ResponsiveAppBar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-  const navigate = useNavigate()
 
   return (
     <>
